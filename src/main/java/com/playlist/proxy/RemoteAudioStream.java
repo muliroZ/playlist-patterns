@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * RealSubject do padrão Proxy: baixa o áudio de um servidor remoto.
- *
+
  * Este arquivo não deve ser alterado. Criar uma instância
  * representa abrir conexão com o servidor de mídia, e cada chamada a
  * {@link #readBytes()} representa uma transferência pela rede. Os
