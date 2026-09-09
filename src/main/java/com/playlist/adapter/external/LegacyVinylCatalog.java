@@ -11,11 +11,12 @@ import java.util.List;
 
 /**
  * Sistema externo legado de catálogo de vinis.
- *
+
  * Este arquivo simula uma dependência de terceiros: você não pode alterá-lo.
- * Ele devolve registros em texto puro, separados por pipe, com a duração em milissegundos e o artista no formato
+ * Ele devolve registros em texto puro, separados por pipe, com a duração em milissegundos e o
+ artista no formato
  * "SOBRENOME, NOME" em caixa alta.
- *
+
  * O layout de cada registro é:
  * {NUMERO_CATALOGO|TITULO|SOBRENOME, NOME|DURACAO_MS|PREMIUM}.
  */
