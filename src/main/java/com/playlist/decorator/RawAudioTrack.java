@@ -2,7 +2,7 @@ package com.playlist.decorator;
 
 /**
  * Componente concreto do padrão Decorator: o áudio original, sem nenhum efeito.
- *
+
  * Este arquivo não deve ser alterado.
  */
 public final class RawAudioTrack implements AudioTrack {

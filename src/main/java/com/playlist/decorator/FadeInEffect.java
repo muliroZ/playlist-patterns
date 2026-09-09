@@ -5,24 +5,35 @@ package com.playlist.decorator;
  */
 public final class FadeInEffect extends AudioEffect {
 
+  private final int sampleCount;
+
   /**
    * Cria o efeito de fade in.
    *
-   * @param wrapped áudio decorado.
+   * @param wrapped     áudio decorado.
    * @param sampleCount quantidade de amostras usadas na rampa.
    */
   public FadeInEffect(AudioTrack wrapped, int sampleCount) {
     super(wrapped);
-    throw new UnsupportedOperationException("Exercício 4: implemente o construtor de FadeInEffect");
+    this.sampleCount = sampleCount;
   }
 
   @Override
   protected String describe() {
-    throw new UnsupportedOperationException("Exercício 4: implemente FadeInEffect.describe");
+    return "fadeIn(%d)".formatted(sampleCount);
   }
 
   @Override
   public double[] getSamples() {
-    throw new UnsupportedOperationException("Exercício 4: implemente FadeInEffect.getSamples");
+    if (sampleCount == 0) {
+      return wrapped.getSamples();
+    }
+
+    double[] samples = wrapped.getSamples();
+    for (int i = 0; i < sampleCount; i++) {
+      samples[i] *= ((double) i / sampleCount);
+    }
+
+    return samples;
   }
 }
