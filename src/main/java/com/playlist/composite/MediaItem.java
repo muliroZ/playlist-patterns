@@ -10,7 +10,10 @@ import java.util.List;
  */
 public interface MediaItem {
   String getName();
+
   int getDurationSeconds();
+
   int getTrackCount();
+  
   List<Track> flatten();
 }
